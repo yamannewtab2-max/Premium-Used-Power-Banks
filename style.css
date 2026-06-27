@@ -114,6 +114,35 @@ body{
   0%,100%{transform:translateX(-50%) translateY(0);opacity:0.3}
   50%{transform:translateX(-50%) translateY(10px);opacity:0.8}
 }
+
+/* ─── Hero Buttons ─── */
+.hero__buttons{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+  margin-top:2rem;
+}
+.btn{
+  display:inline-block;padding:0.85rem 2rem;border-radius:50px;
+  font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;
+  text-decoration:none;transition:all 0.3s cubic-bezier(0.23,1,0.32,1);
+  cursor:pointer;
+}
+.btn--primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+  color:#1a1206;box-shadow:0 4px 24px rgba(240,194,127,0.25);
+}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(240,194,127,0.35)}
+.btn--secondary{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.15);
+  color:#fff;
+}
+.btn--secondary:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+@media(max-width:640px){
+  .hero__buttons{gap:0.7rem;margin-top:1.5rem}
+  .btn{padding:0.7rem 1.4rem;font-size:0.85rem}
+}
+
 @media(max-width:640px){.hero{padding-top:52px}}
 
 /* ─── STEP 2: WHOLESALE ─── */
