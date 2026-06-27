@@ -2,8 +2,6 @@
    PREMIUM USED POWER BANKS — Pro Edition
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap');
-
 /* ─── Reset ─── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -30,7 +28,7 @@ html{
 }
 
 body{
-  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-family:'Outfit','Inter',system-ui,-apple-system,sans-serif;
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
@@ -150,14 +148,16 @@ body{
 }
 
 .hero__title{
+  font-family:'Playfair Display','Times New Roman',serif;
   font-size:clamp(2.2rem,7vw,5.5rem);
-  font-weight:900;
+  font-weight:800;
+  font-style:italic;
   line-height:1.05;
-  letter-spacing:-0.03em;
-  background:linear-gradient(135deg,#fff 35%,var(--gold-light) 100%);
+  letter-spacing:-0.02em;
+  background:linear-gradient(135deg,#fff 30%,var(--gold-light) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   margin-bottom:1.2rem;
-  filter:drop-shadow(0 4px 20px rgba(0,0,0,0.4));
+  filter:drop-shadow(0 4px 24px rgba(0,0,0,0.5));
 }
 
 .hero__sub{
@@ -231,8 +231,10 @@ body{
 .card__icon{font-size:2.2rem;display:block;margin-bottom:0.4rem}
 
 .card__title{
+  font-family:'Playfair Display','Times New Roman',serif;
   font-size:clamp(1.3rem,3vw,1.8rem);
-  font-weight:800;
+  font-weight:700;
+  font-style:italic;
   background:linear-gradient(135deg,#fff,var(--gold-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
@@ -324,8 +326,10 @@ body{
 }
 
 .section__title{
+  font-family:'Playfair Display','Times New Roman',serif;
   font-size:clamp(1.8rem,4vw,3rem);
-  font-weight:800;
+  font-weight:700;
+  font-style:italic;
   line-height:1.15;
   background:linear-gradient(135deg,#fff,var(--gold-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
