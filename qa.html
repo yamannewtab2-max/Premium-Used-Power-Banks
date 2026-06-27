@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q&A — Premium Used Power Banks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Playfair+Display:ital,wght@0,600..900;1,600..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-qa{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:7rem 1.5rem 3rem;background:var(--bg)}
+    .page-qa .card--glass{max-width:700px;width:100%;padding:2.5rem 2rem}
+    .back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--gold-light);text-decoration:none;font-size:0.9rem;font-weight:500;margin-bottom:1.5rem;transition:gap 0.3s}
+    .back-link:hover{gap:0.7rem}
+    .qa-header{text-align:center;margin-bottom:2rem}
+    .qa-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;font-style:italic;color:var(--gold-light);margin-bottom:0.3rem}
+    .qa-header p{color:var(--text-muted);font-size:0.9rem}
+    .qa-list{display:flex;flex-direction:column;gap:0.75rem}
+    .qa-item{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:rgba(255,255,255,0.03);transition:all 0.3s}
+    .qa-item:hover{border-color:rgba(240,194,127,0.3)}
+    .qa-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;background:none;border:none;color:var(--text);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;text-align:left;transition:color 0.3s}
+    .qa-q:hover{color:var(--gold-light)}
+    .qa-q .qa-icon{font-size:1.2rem;transition:transform 0.3s;flex-shrink:0;color:var(--gold-light)}
+    .qa-item.active .qa-q .qa-icon{transform:rotate(180deg)}
+    .qa-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease}
+    .qa-a-inner{padding:0 1.2rem 1rem;color:var(--text-muted);font-size:0.95rem;line-height:1.6;font-family:'Outfit',sans-serif}
+    .qa-item.active .qa-a{max-height:300px}
+    .qa-item.active .qa-a-inner{padding:0 1.2rem 1rem}
+    @media(max-width:640px){.page-qa{padding:5rem 0.75rem 1.5rem}.qa-q{font-size:0.9rem;padding:0.85rem 1rem}}
+  </style>
+</head>
+<body>
+  <div class="page-qa">
+    <div style="max-width:700px;width:100%">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <div class="card--glass">
+        <div class="qa-header">
+          <span style="font-size:2.5rem;display:block;margin-bottom:0.3rem">❓</span>
+          <h1>Frequently Asked Questions</h1>
+          <p>Common questions from our wholesale buyers</p>
+        </div>
+        <div style="height:1px;background:var(--border);margin:0 0 1.5rem"></div>
+        <div class="qa-list">
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>🔋 What original brands do you carry?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>Anker, Baseus, Ugreen &amp; more</strong> — We stock top original brands of premium used power banks.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>✅ What condition are the power banks in?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>Premium Used</strong> — Strict QC passed. Every unit is inspected before shipping.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>🔋 What capacities are available?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>10,000mAh / 20,000mAh / few 30000 mah , including Magnetic wireless</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>🛑 What is the minimum order?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>1 Sack (1 Ton) = 4,400 PCS</strong> — Wholesale bulk orders only.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>❌ Can I buy retail?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>No.</strong> Wholesale only — B2B bulk pricing. No retail sales.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>📦 How many pieces in a sack?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>4,400 PCS</strong> — Approximately 4,400 pieces per sack (1 ton).
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>📦 How many cartons in a sack?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>32 cartons</strong> in general, each carton contains approximately 130–140 pieces.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>🚀 Is there good profit for bulk buyers?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>Huge Margins!</strong> Our wholesale pricing is designed for serious bulk buyers to maximize profits.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>📊 How much do you sell per month?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                We sell over <strong>100+ tons per month</strong> — trusted by serious B2B buyers worldwide.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>📍 Where is your warehouse?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>Dongguan, China</strong> — Near Guangzhou, easily accessible for worldwide shipping.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-item">
+            <button class="qa-q">
+              <span>📲 How can I contact you?</span>
+              <span class="qa-icon">▼</span>
+            </button>
+            <div class="qa-a">
+              <div class="qa-a-inner">
+                <strong>WeChat / WhatsApp: +86 180 2693 7104</strong> — Message us anytime for bulk pricing and inquiries.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.qa-q').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const item = this.closest('.qa-item');
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.qa-item.active').forEach(function(el) {
+            el.classList.remove('active');
+          });
+          if (!isActive) item.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

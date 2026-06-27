@@ -15,14 +15,11 @@
     .album-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;max-width:960px;margin:0 auto}
     .album-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--bg-card);transition:transform 0.35s,box-shadow 0.35s}
     .album-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
-    .album-card img{width:100%;height:240px;object-fit:cover;display:block}
-    .album-card__body{padding:1.2rem 1.2rem 1.5rem}
-    .album-card__body h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
-    .album-card__body p{font-size:0.82rem;color:var(--text-muted)}
+    .album-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+    .album-card__label{display:block;padding:0.5rem 1rem;font-size:0.85rem;font-weight:600;color:var(--gold-light);background:var(--bg);text-align:center;border-top:1px solid var(--border)}
     .back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--gold-light);text-decoration:none;font-size:0.9rem;font-weight:500;margin-bottom:1.5rem;transition:gap 0.3s}
     .back-link:hover{gap:0.7rem}
     @media(max-width:640px){.page-album{padding:5rem 0.75rem 1.5rem}}
-    .album-card__img{width:100%;height:240px;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:900;color:#fff}
   </style>
 </head>
 <body>
@@ -38,46 +35,36 @@
       </div>
       <div class="album-grid">
         <div class="album-card">
-          <div class="album-card__img" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">🔋10K</div>
-          <div class="album-card__body">
-            <h3>EcoCharge 10K</h3>
-            <p>10,000 mAh · Slim Design · Fast Charging</p>
-          </div>
+          <img src="album-photo-1.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">1-</span>
         </div>
         <div class="album-card">
-          <div class="album-card__img" style="background:linear-gradient(135deg,#2d1b3d,#4a1942)">🔋20K</div>
-          <div class="album-card__body">
-            <h3>PowerMax 20K</h3>
-            <p>20,000 mAh · Dual USB · Premium Build</p>
-          </div>
+          <img src="album-photo-2.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">2-</span>
         </div>
         <div class="album-card">
-          <div class="album-card__img" style="background:linear-gradient(135deg,#0f2027,#203a43)">🔋30K</div>
-          <div class="album-card__body">
-            <h3>UltraCell 30K</h3>
-            <p>30,000 mAh · Fast Charge · High Capacity</p>
-          </div>
+          <img src="album-photo-3.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">3-</span>
         </div>
         <div class="album-card">
-          <img src="bg.jpg" alt="Power Bank Collection" />
-          <div class="album-card__body">
-            <h3>Wholesale Lot — Photo 1</h3>
-            <p>Bulk inventory · Mixed capacities available</p>
-          </div>
+          <img src="album-photo-4.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">4-</span>
         </div>
         <div class="album-card">
-          <img src="bg2.jpg" alt="Power Bank Collection 2" />
-          <div class="album-card__body">
-            <h3>Wholesale Lot — Photo 2</h3>
-            <p>Warehouse stock · Ready to ship</p>
-          </div>
+          <img src="album-photo-5.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">5-</span>
         </div>
         <div class="album-card">
-          <div class="album-card__img" style="background:linear-gradient(135deg,#1b4332,#2d6a4f)">🔋15K</div>
-          <div class="album-card__body">
-            <h3>TravelBuddy 15K</h3>
-            <p>15,000 mAh · Wireless Charging · Compact</p>
-          </div>
+          <img src="album-photo-9.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">9-</span>
+        </div>
+        <div class="album-card">
+          <img src="album-photo-10.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">10-</span>
+        </div>
+        <div class="album-card">
+          <img src="album-photo-11.jpg" alt="" loading="lazy" />
+          <span class="album-card__label">11-</span>
         </div>
       </div>
     </div>
