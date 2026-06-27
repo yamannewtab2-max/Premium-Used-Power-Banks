@@ -4,203 +4,208 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premium Used Power Banks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header" id="header">
-    <div class="header-inner">
-      <span class="header-logo">Premium Power Banks</span>
-      <a href="#" class="header-contact">📲 Contact Us</a>
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <span class="header__logo-icon">⚡</span>
+        <span>Premium Power Banks</span>
+      </a>
+      <nav class="header__nav">
+        <a href="#wholesale" class="header__link">Wholesale</a>
+        <a href="#about" class="header__link">About</a>
+        <a href="#" class="header__cta">📲 Contact Us</a>
+      </nav>
+      <button class="header__burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title" data-split>Premium<br />Used Power Banks</h1>
-      <p class="hero-sub" data-fade>Reliable. Affordable. Certified.</p>
-      <div class="hero-scroll-indicator" data-fade>
-        <span>Scroll Down</span>
-        <div class="scroll-arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </div>
-      </div>
-      <a href="#wholesale" class="floating-down" aria-label="Scroll down">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </a>
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__badge">Premium Quality · Certified</span>
+      <h1 class="hero__title">Premium<br />Used Power Banks</h1>
+      <p class="hero__sub">Reliable. Affordable. Certified. — Thousands of happy customers worldwide.</p>
     </div>
-  </section>
-
-  <!-- WHOLESALE (after scroll — same blur effect) -->
-  <section class="wholesale" id="wholesale">
-    <div class="wholesale-bg"></div>
-    <div class="wholesale-overlay"></div>
-    <div class="wholesale-content">
-      <div class="wholesale-card" data-fade>
-        <h2>🔋 Wholesale Power Banks — 1 Sack / 1 Ton Minimum 🔋</h2>
-        <ul class="wholesale-details">
-          <li><strong>Original Brands:</strong> Anker, Baseus, Ugreen &amp; more.</li>
-          <li><strong>Condition:</strong> Premium Used, Strict QC.</li>
-          <li><strong>Mix:</strong> 10,000mAh / 20,000mAh / Magnetic.</li>
-          <li class="highlight">🛑 <strong>MOQ:</strong> 1 Sack (1 Ton) — 4,400 PCS</li>
-          <li class="highlight">❌ No Retail · Wholesale Only.</li>
-          <li class="highlight">🚀 Huge Profit For Bulk Buyers!</li>
-          <li><strong>📍 Warehouse:</strong> Dongguan, China (Near Guangzhou).</li>
-          <li><strong>📲 WeChat / WhatsApp:</strong> +86 180 2693 7104 (Serious Buyers Only)</li>
-        </ul>
-      </div>
-    </div>
-    <a href="#about" class="floating-down" aria-label="Keep scrolling">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
+    <a href="#wholesale" class="hero__scroll">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </a>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ═══ WHOLESALE ═══ -->
+  <section class="wholesale" id="wholesale">
+    <div class="wholesale__bg"></div>
+    <div class="wholesale__overlay"></div>
+    <div class="wholesale__content">
+      <div class="card card--glass">
+        <div class="card__header">
+          <span class="card__icon">🔋</span>
+          <h2 class="card__title">Wholesale Power Banks</h2>
+          <p class="card__sub">1 Sack / 1 Ton Minimum</p>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__list">
+          <li class="card__item">
+            <span class="card__tag">Brands</span>
+            <span class="card__value">Anker, Baseus, Ugreen &amp; more</span>
+          </li>
+          <li class="card__item">
+            <span class="card__tag">Condition</span>
+            <span class="card__value">Premium Used · Strict QC</span>
+          </li>
+          <li class="card__item">
+            <span class="card__tag">Mix</span>
+            <span class="card__value">10,000mAh / 20,000mAh / Magnetic</span>
+          </li>
+          <li class="card__item card__item--highlight">
+            <span class="card__tag">🛑 MOQ</span>
+            <span class="card__value">1 Sack (1 Ton) — 4,400 PCS</span>
+          </li>
+          <li class="card__item card__item--warn">
+            <span class="card__tag">❌ No Retail</span>
+            <span class="card__value">Wholesale Only</span>
+          </li>
+          <li class="card__item card__item--profit">
+            <span class="card__tag">🚀 Profit</span>
+            <span class="card__value">Huge Margins For Bulk Buyers</span>
+          </li>
+          <li class="card__item">
+            <span class="card__tag">📍 Warehouse</span>
+            <span class="card__value">Dongguan, China (Near Guangzhou)</span>
+          </li>
+          <li class="card__item card__item--contact">
+            <span class="card__tag">📲 Contact</span>
+            <span class="card__value">WeChat / WhatsApp: +86 180 2693 7104</span>
+          </li>
+        </ul>
+        <div class="card__divider"></div>
+        <p class="card__footnote">Serious Buyers Only — B2B Wholesale Pricing</p>
+      </div>
+    </div>
+    <a href="#about" class="wholesale__scroll">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
   <section class="section about" id="about">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-text" data-slide="left">
-          <span class="badge">About Us</span>
-          <h2>Top-Quality Pre-Owned Power</h2>
+    <div class="section__inner">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section__badge">About Us</span>
+          <h2 class="section__title">Top-Quality<br />Pre-Owned Power</h2>
           <p>Every unit is tested, certified, and backed by our 30-day guarantee. We source only the best used power banks so you get premium performance at a fraction of the cost.</p>
-          <p>Thousands of satisfied customers worldwide.</p>
+          <p>Thousands of satisfied customers worldwide — from small businesses to enterprise fleets.</p>
         </div>
-        <div class="about-stats" data-slide="right">
+        <div class="about__stats">
           <div class="stat">
-            <span class="stat-num" data-count="5000">0</span>
-            <span class="stat-label">Units Sold</span>
+            <span class="stat__num" data-count="5000">0</span>
+            <span class="stat__label">Units Sold</span>
           </div>
           <div class="stat">
-            <span class="stat-num" data-count="98">0</span>
-            <span class="stat-label">% Satisfaction</span>
+            <span class="stat__num" data-count="98">0</span>
+            <span class="stat__label">Satisfaction</span>
           </div>
           <div class="stat">
-            <span class="stat-num" data-count="30">0</span>
-            <span class="stat-label">Day Warranty</span>
+            <span class="stat__num" data-count="30">0</span>
+            <span class="stat__label">Day Warranty</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES PARALLAX -->
+  <!-- ═══ FEATURES ═══ -->
   <section class="section features" id="features">
-    <div class="features-bg-parallax"></div>
-    <div class="section-inner">
-      <h2 data-fade>Why Choose Us</h2>
-      <div class="features-grid">
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#9889;</div>
+    <div class="features__parallax"></div>
+    <div class="section__inner">
+      <span class="section__badge">Why Choose Us</span>
+      <h2 class="section__title">Built for Bulk</h2>
+      <div class="features__grid">
+        <div class="feature">
+          <div class="feature__icon">⚡</div>
           <h3>High Capacity</h3>
-          <p>10,000 – 30,000 mAh. Enough to charge your devices multiple times.</p>
+          <p>10,000 – 30,000 mAh. Charge multiple devices.</p>
         </div>
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#10003;</div>
+        <div class="feature">
+          <div class="feature__icon">✅</div>
           <h3>Certified Quality</h3>
-          <p>Every unit inspected and certified by our technicians.</p>
+          <p>Every unit inspected by our technicians.</p>
         </div>
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#36;</div>
-          <h3>Affordable Prices</h3>
-          <p>Up to 60% less than retail. Premium quality without the premium price.</p>
+        <div class="feature">
+          <div class="feature__icon">💰</div>
+          <h3>Affordable</h3>
+          <p>Up to 60% less than retail. Premium without the price.</p>
         </div>
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#128666;</div>
+        <div class="feature">
+          <div class="feature__icon">🚚</div>
           <h3>Fast Shipping</h3>
-          <p>Free delivery on orders over $50. Delivered in 3–5 business days.</p>
+          <p>Free delivery on orders over $50. 3–5 business days.</p>
         </div>
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#128260;</div>
+        <div class="feature">
+          <div class="feature__icon">🌱</div>
           <h3>Eco-Friendly</h3>
-          <p>Giving great devices a second life — better for your wallet and the planet.</p>
+          <p>Giving great devices a second life.</p>
         </div>
-        <div class="feature-card" data-scale>
-          <div class="card-icon">&#129309;</div>
+        <div class="feature">
+          <div class="feature__icon">💬</div>
           <h3>24/7 Support</h3>
-          <p>Our team is always ready to help with any questions or concerns.</p>
+          <p>We're always ready to help.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- ═══ PRODUCTS ═══ -->
   <section class="section products" id="products">
-    <div class="section-inner">
-      <h2 data-fade>Featured Power Banks</h2>
-      <div class="products-scroll">
-        <div class="product-card" data-slide="up">
-          <div class="product-img placehold" style="background:linear-gradient(135deg,#667eea,#764ba2)">10K</div>
+    <div class="section__inner">
+      <span class="section__badge">Inventory</span>
+      <h2 class="section__title">Featured Power Banks</h2>
+      <div class="products__grid">
+        <div class="product">
+          <div class="product__img" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">10K</div>
           <h3>EcoCharge 10K</h3>
-          <p class="price">$19.99</p>
-          <p>10,000 mAh · Slim fit</p>
+          <p class="product__price">$19.99</p>
+          <p class="product__spec">10,000 mAh · Slim</p>
         </div>
-        <div class="product-card" data-slide="up">
-          <div class="product-img placehold" style="background:linear-gradient(135deg,#f093fb,#f5576c)">20K</div>
+        <div class="product">
+          <div class="product__img" style="background:linear-gradient(135deg,#2d1b3d,#4a1942)">20K</div>
           <h3>PowerMax 20K</h3>
-          <p class="price">$29.99</p>
-          <p>20,000 mAh · Dual USB</p>
+          <p class="product__price">$29.99</p>
+          <p class="product__spec">20,000 mAh · Dual USB</p>
         </div>
-        <div class="product-card" data-slide="up">
-          <div class="product-img placehold" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">30K</div>
+        <div class="product">
+          <div class="product__img" style="background:linear-gradient(135deg,#0f2027,#203a43)">30K</div>
           <h3>UltraCell 30K</h3>
-          <p class="price">$39.99</p>
-          <p>30,000 mAh · Fast Charge</p>
+          <p class="product__price">$39.99</p>
+          <p class="product__spec">30,000 mAh · Fast Charge</p>
         </div>
-        <div class="product-card" data-slide="up">
-          <div class="product-img placehold" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">15K</div>
+        <div class="product">
+          <div class="product__img" style="background:linear-gradient(135deg,#1b4332,#2d6a4f)">15K</div>
           <h3>TravelBuddy 15K</h3>
-          <p class="price">$24.99</p>
-          <p>15,000 mAh · Wireless</p>
+          <p class="product__price">$24.99</p>
+          <p class="product__spec">15,000 mAh · Wireless</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials" id="testimonials">
-    <div class="section-inner">
-      <h2 data-fade>What Our Customers Say</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card" data-scale>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Bought the 20K power bank — looks brand new and lasts forever. Unbelievable value!"</p>
-          <span class="author">— Ahmed K.</span>
-        </div>
-        <div class="testimonial-card" data-scale>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Fast shipping, great packaging, and the battery holds like new. Highly recommend."</p>
-          <span class="author">— Sara M.</span>
-        </div>
-        <div class="testimonial-card" data-scale>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I was skeptical about used electronics but this changed my mind. Certified quality!"</p>
-          <span class="author">— Omar R.</span>
-        </div>
-      </div>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; 2026 Premium Used Power Banks — Wholesale Division</p>
+      <p class="footer__contact">📲 WeChat / WhatsApp: +86 180 2693 7104</p>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta" id="cta">
-    <div class="section-inner">
-      <h2 data-fade>Ready to Power Up?</h2>
-      <p data-fade>Get your premium used power bank today with free shipping.</p>
-      <a href="#" class="cta-btn" data-scale>Shop Now</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Premium Used Power Banks. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
