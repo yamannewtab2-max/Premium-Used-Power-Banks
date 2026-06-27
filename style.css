@@ -9,7 +9,7 @@
 }
 
 :root {
-  --blur-amount: 40px;    /* ~40% blur strength */
+  --blur-amount: 4px;    /* subtle blur — photo clearly visible */
   --primary: #f0c27f;
   --primary-light: #f5d6a8;
   --secondary: #fbdb89;
