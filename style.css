@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -380,6 +380,8 @@ body {
 
 .about {
   background: linear-gradient(180deg, var(--dark) 0%, #111827 100%);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .about-grid {
@@ -446,6 +448,8 @@ body {
 .features {
   background: #0d1117;
   overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .features-bg-parallax {
@@ -505,6 +509,8 @@ body {
 
 .products {
   background: linear-gradient(180deg, #0d1117, var(--dark));
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .products-scroll {
@@ -564,6 +570,8 @@ body {
 
 .testimonials {
   background: #111827;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .testimonials-grid {
@@ -613,6 +621,8 @@ body {
   text-align: center;
   background: linear-gradient(180deg, var(--dark), #05070d);
   padding: 120px 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .cta h2 {
