@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -94,6 +95,8 @@ body {
   justify-content: center;
   overflow: hidden;
   padding-top: 60px; /* space for fixed header */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero-bg {
@@ -233,12 +236,14 @@ body {
 .wholesale {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   padding: 100px 2rem 80px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .wholesale-bg {
