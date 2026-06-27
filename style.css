@@ -124,6 +124,7 @@ body{
   position:relative;z-index:2;
   text-align:center;padding:2rem;
   max-width:800px;
+  margin-top:-2rem;
 }
 
 .hero__content::before{
