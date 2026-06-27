@@ -117,6 +117,14 @@ body {
   border: 2px solid var(--text-muted);
   border-radius: 12px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.scroll-arrow svg {
+  animation: scrollBounce 2s infinite;
 }
 
 .scroll-arrow::after {
@@ -130,6 +138,38 @@ body {
   background: var(--text);
   border-radius: 2px;
   animation: scrollBounce 2s infinite;
+}
+
+/* ─── Floating down arrow at hero bottom ─── */
+
+.floating-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  animation: floatDown 2.5s ease-in-out infinite;
+  transition: color 0.3s, opacity 0.3s;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.floating-down:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 1;
+  }
 }
 
 @keyframes scrollBounce {
