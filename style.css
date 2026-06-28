@@ -92,7 +92,7 @@ body{
 }
 .hero__sub{
   font-family:'Cormorant Garamond','Times New Roman',serif;
-  font-size:clamp(4rem,13vw,10rem);
+  font-size:clamp(8rem,26vw,20rem);
   font-weight:800;font-style:italic;
   line-height:1.2;
   color:#fff5d6;
