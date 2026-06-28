@@ -92,7 +92,7 @@ body{
 }
 .hero__sub{
   font-family:'Anton','Impact',sans-serif;
-  font-size:clamp(8rem,26vw,20rem);
+  font-size:clamp(8rem,26vw,12rem);
   font-weight:400;
   line-height:1.1;
   color:#fff5d6;
