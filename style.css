@@ -58,8 +58,8 @@ body{
   position:absolute;inset:0;
   background:url('bg-hero.jpg') center/cover no-repeat;
   z-index:0;
-  filter:blur(4px) brightness(0.7);
-  -webkit-filter:blur(4px) brightness(0.7);
+  filter:brightness(0.6);
+  -webkit-filter:brightness(0.6);
   transform:scale(1.05);
   will-change:transform;
 }
