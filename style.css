@@ -79,7 +79,9 @@ body{
   font-size:clamp(2rem,6vw,4.5rem);
   font-weight:900;
   line-height:1.1;letter-spacing:-0.03em;
-  color:#f5d6a8;
+  color:#d4a04a;
+  -webkit-text-stroke:3px #fceabb;
+  paint-order:stroke fill;
   text-shadow:
     0 2px 4px rgba(0,0,0,0.95),
     0 4px 12px rgba(0,0,0,0.8),
