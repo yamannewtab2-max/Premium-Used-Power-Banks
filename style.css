@@ -109,6 +109,10 @@ body{
 /* Big on phones, smaller on PC */
 @media(min-width:768px){
   .hero__sub{font-size:clamp(2.5rem,5vw,4rem);margin:0.6rem 0}
+  .hero__title{font-size:clamp(1.6rem,3.5vw,2.8rem);-webkit-text-stroke:2px #fceabb}
+  .hero__tagline{font-size:clamp(0.7rem,1vw,0.85rem);max-width:400px;padding:0.3rem 0.6rem}
+  .hero__buttons{gap:0.35rem;margin-top:0.8rem}
+  .btn{padding:0.5rem 1rem;font-size:0.75rem;max-width:200px}
 }
 .hero__tagline{
   font-size:clamp(0.85rem,1.4vw,1rem);
