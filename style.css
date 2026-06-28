@@ -58,17 +58,17 @@ body{
   position:absolute;inset:0;
   background:url('bg-hero.jpg') center/cover no-repeat;
   z-index:0;
-  filter:brightness(0.6);
-  -webkit-filter:brightness(0.6);
+  filter:none;
+  -webkit-filter:none;
   transform:scale(1.05);
   will-change:transform;
 }
 .hero__overlay{
   position:absolute;inset:0;z-index:1;
   background:linear-gradient(135deg,
-    rgba(0,0,0,0.4) 0%,
-    rgba(0,0,0,0.15) 50%,
-    rgba(0,0,0,0.4) 100%
+    rgba(0,0,0,0.15) 0%,
+    transparent 50%,
+    rgba(0,0,0,0.15) 100%
   );
 }
 .hero__content{
