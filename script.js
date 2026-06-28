@@ -88,28 +88,4 @@ document.querySelectorAll('.about__stat-num').forEach(el => {
   }
 })
 
-// ═══ SMOOTH MOUSE PARALLAX ON HERO (desktop only) ═══
-if (window.innerWidth > 768) {
-  const hero = document.querySelector('.hero')
-  if (hero) {
-    hero.addEventListener('mousemove', (e) => {
-      const { left, top, width, height } = hero.getBoundingClientRect()
-      const x = (e.clientX - left) / width - 0.5
-      const y = (e.clientY - top) / height - 0.5
-      
-      const content = hero.querySelector('.hero__content')
-      if (content) {
-        content.style.transform = `translate(${x * 20}px, ${y * 20}px)`
-      }
-    })
-    
-    hero.addEventListener('mouseleave', () => {
-      const content = hero.querySelector('.hero__content')
-      if (content) {
-        content.style.transform = 'translate(0, 0)'
-        content.style.transition = 'transform 0.5s ease'
-        setTimeout(() => { content.style.transition = '' }, 500)
-      }
-    })
-  }
-}
+
