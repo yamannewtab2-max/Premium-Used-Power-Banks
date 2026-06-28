@@ -92,7 +92,7 @@ body{
 }
 .hero__sub{
   font-family:'Anton','Impact',sans-serif;
-  font-size:clamp(8rem,26vw,12rem);
+  font-size:clamp(4rem,12vw,6rem);
   font-weight:400;
   line-height:1.1;
   color:#fff5d6;
@@ -102,9 +102,13 @@ body{
     0 0 15px rgba(0,0,0,0.9),
     0 0 40px rgba(0,0,0,0.5),
     0 2px 20px #000;
-  margin:1.2rem 0;
+  margin:0.8rem 0;
   opacity:0;transform:translateY(30px);
   animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.4s forwards;
+}
+/* Big on phones, smaller on PC */
+@media(min-width:768px){
+  .hero__sub{font-size:clamp(2.5rem,5vw,4rem);margin:0.6rem 0}
 }
 .hero__tagline{
   font-size:clamp(0.85rem,1.4vw,1rem);
