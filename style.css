@@ -61,14 +61,14 @@ body{
 }
 .hero__overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(6,8,14,0.15) 0%,transparent 30%,transparent 60%,rgba(6,8,14,0.35) 100%),radial-gradient(ellipse at center,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.4) 100%);
+  background:rgba(0,0,0,0.05);
 }
 .hero__content{
   position:relative;z-index:2;text-align:center;padding:2rem;max-width:800px;margin-top:-2rem;
 }
 .hero__content::before{
   content:'';position:absolute;inset:-40px;
-  background:radial-gradient(ellipse at center,rgba(0,0,0,0.3) 0%,transparent 70%);
+  background:radial-gradient(ellipse at center,rgba(0,0,0,0.08) 0%,transparent 70%);
   z-index:-1;border-radius:50%;
 }
 .hero__title{
