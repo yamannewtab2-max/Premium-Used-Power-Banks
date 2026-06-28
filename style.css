@@ -91,10 +91,10 @@ body{
   animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.2s forwards;
 }
 .hero__sub{
-  font-family:'Playfair Display','Times New Roman',serif;
-  font-size:clamp(1.6rem,4.5vw,3.5rem);
+  font-family:'Cormorant Garamond','Times New Roman',serif;
+  font-size:clamp(1.8rem,5vw,3.8rem);
   font-weight:700;font-style:italic;
-  line-height:1.4;
+  line-height:1.3;
   color:#fff5d6;
   -webkit-text-stroke:0.8px rgba(0,0,0,0.3);
   text-shadow:
@@ -174,7 +174,7 @@ body{
 /* Short viewport fix - ensure hero content fits in center */
 @media(max-height:700px){
   .hero__title{font-size:clamp(1.6rem,5vw,2.8rem);margin-bottom:0.2rem}
-  .hero__sub{font-size:clamp(1.2rem,3vw,2rem)}
+  .hero__sub{font-size:clamp(1.3rem,3.5vw,2.2rem)}
   .hero__tagline{font-size:clamp(0.65rem,1vw,0.8rem);max-width:360px}
   .hero__buttons{gap:0.35rem;margin-top:0.6rem}
   .btn{padding:0.4rem 0.8rem;font-size:0.72rem;max-width:180px}
