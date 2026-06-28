@@ -52,7 +52,7 @@ body{
 .hero{
   position:relative;width:100%;height:100vh;
   display:flex;align-items:center;justify-content:center;
-  overflow:hidden;padding:60px 0 40px;
+  overflow:hidden;
 }
 .hero__bg{
   position:absolute;inset:0;
@@ -76,7 +76,7 @@ body{
 }
 .hero__title{
   font-family:'Outfit','Inter',sans-serif;
-  font-size:clamp(2.4rem,7vw,5rem);
+  font-size:clamp(2rem,6vw,4.5rem);
   font-weight:900;
   line-height:1.1;letter-spacing:-0.03em;
   color:#fff;
@@ -85,13 +85,13 @@ body{
     0 0 20px rgba(0,0,0,0.9),
     0 0 60px rgba(0,0,0,0.6),
     0 4px 30px rgba(0,0,0,0.8);
-  margin-bottom:0.6rem;
+  margin-bottom:0.4rem;
   opacity:0;transform:translateY(40px);
   animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.2s forwards;
 }
 .hero__sub{
   font-family:'Playfair Display','Times New Roman',serif;
-  font-size:clamp(1.6rem,4vw,3rem);
+  font-size:clamp(1.2rem,3vw,2.5rem);
   font-weight:900;font-style:italic;
   line-height:1.15;
   color:var(--gold-light);
@@ -100,15 +100,15 @@ body{
     0 0 15px rgba(0,0,0,0.9),
     0 0 40px rgba(0,0,0,0.5),
     0 2px 20px #000;
-  margin-bottom:0.3rem;
+  margin-bottom:0.2rem;
   opacity:0;transform:translateY(30px);
   animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.4s forwards;
 }
 .hero__tagline{
-  font-size:clamp(0.85rem,1.5vw,1.05rem);
+  font-size:clamp(0.75rem,1.2vw,0.95rem);
   color:#fff;
-  font-weight:600;line-height:1.7;
-  max-width:520px;margin:0 auto 0.2rem;
+  font-weight:600;line-height:1.5;
+  max-width:480px;margin:0 auto 0.1rem;
   -webkit-text-stroke:0.5px rgba(0,0,0,0.3);
   text-shadow:
     0 0 10px rgba(0,0,0,0.9),
@@ -122,14 +122,14 @@ body{
 @media(max-width:640px){.hero{padding-top:52px}}
 
 /* ─── Buttons ─── */
-.hero__buttons{display:flex;flex-direction:column;gap:0.6rem;align-items:center;margin-top:2rem}
+.hero__buttons{display:flex;flex-direction:column;gap:0.5rem;align-items:center;margin-top:1.2rem}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  padding:0.75rem 1.5rem;border-radius:50px;
-  font-family:'Outfit',sans-serif;font-size:0.9rem;font-weight:600;
+  padding:0.6rem 1.2rem;border-radius:50px;
+  font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:600;
   text-decoration:none;text-align:center;
   transition:all 0.3s cubic-bezier(0.23,1,0.32,1);
-  width:100%;max-width:280px;
+  width:100%;max-width:240px;
   opacity:0;transform:translateY(30px);
   animation:fadeUp 0.8s cubic-bezier(0.23,1,0.32,1) var(--btn-delay,0.8s) forwards;
 }
@@ -162,6 +162,15 @@ body{
   .hero__buttons{gap:0.5rem;margin-top:1.2rem}
   .btn{padding:0.65rem 1.2rem;font-size:0.82rem;max-width:240px}
   .btn--whatsapp{max-width:100%;padding:0.8rem 1rem;font-size:0.9rem}
+}
+/* Short viewport fix - ensure hero content fits in center */
+@media(max-height:700px){
+  .hero__title{font-size:clamp(1.6rem,5vw,2.8rem);margin-bottom:0.2rem}
+  .hero__sub{font-size:clamp(1rem,2.5vw,1.8rem)}
+  .hero__tagline{font-size:clamp(0.65rem,1vw,0.8rem);max-width:360px}
+  .hero__buttons{gap:0.35rem;margin-top:0.6rem}
+  .btn{padding:0.4rem 0.8rem;font-size:0.72rem;max-width:180px}
+  .hero__content{padding:0.8rem}
 }
 
 /* ─── WHATSAPP BAR ─── */
