@@ -79,11 +79,14 @@ body{
   font-size:clamp(2rem,6vw,4.5rem);
   font-weight:900;
   line-height:1.1;letter-spacing:-0.03em;
-  color:#fff;
-  -webkit-text-stroke:2px rgba(0,0,0,0.3);
+  background:linear-gradient(135deg,#f5d6a8,#f0c27f,#d4a04a);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  -webkit-text-stroke:2px rgba(0,0,0,0.5);
   text-shadow:
-    0 0 20px rgba(0,0,0,0.9),
-    0 0 60px rgba(0,0,0,0.6),
+    0 0 30px rgba(240,194,127,0.3),
+    0 0 60px rgba(0,0,0,0.7),
     0 4px 30px rgba(0,0,0,0.8);
   margin-bottom:0.4rem;
   opacity:0;transform:translateY(40px);
