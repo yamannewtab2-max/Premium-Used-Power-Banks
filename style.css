@@ -79,14 +79,31 @@ body{
   font-size:clamp(2rem,6vw,4.5rem);
   font-weight:900;
   line-height:1.1;letter-spacing:-0.03em;
-  color:#f5d6a8;
+  background:linear-gradient(
+    135deg,
+    #f5d6a8 0%,
+    #fceabb 25%,
+    #f8b500 50%,
+    #fceabb 75%,
+    #f5d6a8 100%
+  );
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
   text-shadow:
     0 2px 4px rgba(0,0,0,0.95),
     0 4px 12px rgba(0,0,0,0.8),
     0 8px 30px rgba(0,0,0,0.6);
   margin-bottom:0.4rem;
   opacity:0;transform:translateY(40px);
-  animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.2s forwards;
+  animation:fadeUp 1s cubic-bezier(0.23,1,0.32,1) 0.2s forwards,
+             shimmer 4s ease-in-out infinite;
+}
+@keyframes shimmer{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 .hero__sub{
   font-family:'Playfair Display','Times New Roman',serif;
