@@ -55,21 +55,20 @@ body{
   overflow:hidden;padding-top:60px;
 }
 .hero__bg{
-  position:absolute;inset:-60px; /* extends beyond edges so blur doesn't show raw edges */
-  background:url('bg-hero.jpg') center/cover no-repeat fixed;
+  position:absolute;inset:0;
+  background:url('bg-hero.jpg') center/cover no-repeat;
   z-index:0;
-  filter:blur(40px) brightness(0.9);
-  -webkit-filter:blur(40px) brightness(0.9);
-  transform:scale(1.1); /* hide blur edge artifacts */
+  filter:blur(4px) brightness(0.7);
+  -webkit-filter:blur(4px) brightness(0.7);
+  transform:scale(1.05);
   will-change:transform;
-  transition:transform 0.1s linear;
 }
 .hero__overlay{
   position:absolute;inset:0;z-index:1;
   background:linear-gradient(135deg,
-    rgba(0,0,0,0.65) 0%,
-    rgba(0,0,0,0.35) 50%,
-    rgba(0,0,0,0.65) 100%
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.15) 50%,
+    rgba(0,0,0,0.4) 100%
   );
 }
 .hero__content{
