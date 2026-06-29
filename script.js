@@ -83,4 +83,24 @@ document.querySelectorAll('.about__stat-num:not([data-no-count])').forEach(el =>
   }
 })
 
+// ═══ COMING SOON MODAL ═══
+function openComingSoon() {
+  document.getElementById('comingSoonModal').classList.add('active')
+  document.body.style.overflow = 'hidden'
+}
+function closeComingSoon(e) {
+  if (e && e.target !== e.currentTarget) return // only close when clicking overlay or close btn directly
+  document.getElementById('comingSoonModal').classList.remove('active')
+  document.body.style.overflow = ''
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('comingSoonModal')
+    if (modal.classList.contains('active')) {
+      modal.classList.remove('active')
+      document.body.style.overflow = ''
+    }
+  }
+})
+
 

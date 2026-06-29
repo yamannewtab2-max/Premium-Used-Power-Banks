@@ -19,7 +19,7 @@
         <span>Shenzhen Luosheng<br />Digital Technology Firm</span>
       </a>
       <nav class="header__nav">
-        <a href="details.html" class="header__cta header__cta--new">CHECK OUT OWR NEW MODDEL</a>
+        <a href="javascript:void(0)" class="header__cta header__cta--new" onclick="openComingSoon()">CHECK OUT OWR NEW MODDEL</a>
         <a href="https://wa.me/8618026937104" target="_blank" class="header__cta">📲 Contact Us</a>
       </nav>
       <button class="header__burger" aria-label="Menu">
@@ -43,7 +43,7 @@
         <a href="reviews.html" class="btn btn--secondary">Packing Process</a>
         <a href="album.html" class="btn btn--secondary">View Album</a>
       </div>
-      <a href="details.html" class="btn btn--new-model">CHECK OUT OWR NEW MODDEL</a>
+      <a href="javascript:void(0)" class="btn btn--new-model" onclick="openComingSoon()">CHECK OUT OWR NEW MODDEL</a>
     </div>
   </section>
 
@@ -83,6 +83,17 @@
       <p class="footer__contact">📲 WeChat / WhatsApp: +86 180 2693 7104</p>
     </div>
   </footer>
+
+  <!-- ═══ COMING SOON POPUP ═══ -->
+  <div class="modal-overlay" id="comingSoonModal" onclick="closeComingSoon(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeComingSoon()">&times;</button>
+      <div class="modal-icon">🚀</div>
+      <h2 class="modal-title">Coming Soon</h2>
+      <p class="modal-text">Our new model is on the way!<br/>Stay tuned for the launch.</p>
+      <button class="modal-btn" onclick="closeComingSoon()">Got it!</button>
+    </div>
+  </div>
 
   <script src="script.js?v=2"></script>
 </body>
