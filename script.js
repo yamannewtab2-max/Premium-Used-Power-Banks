@@ -30,6 +30,10 @@ function animateCounter(el, target, duration = 2000) {
   const start = performance.now()
   const suffix = el.dataset.suffix || ''
   
+  function formatNum(n) {
+    return n.toLocaleString('en-US')
+  }
+  
   function update(now) {
     const elapsed = now - start
     const progress = Math.min(elapsed / duration, 1)
@@ -37,21 +41,12 @@ function animateCounter(el, target, duration = 2000) {
     const eased = 1 - Math.pow(1 - progress, 3)
     const current = Math.round(eased * target)
     
-    if (target >= 1000) {
-      // Format with K suffix for large numbers
-      el.textContent = (current >= 1000 ? (current / 1000).toFixed(1) : current.toString()) + suffix
-    } else {
-      el.textContent = current + suffix
-    }
+    el.textContent = formatNum(current) + suffix
     
     if (progress < 1) {
       requestAnimationFrame(update)
     } else {
-      if (target >= 1000) {
-        el.textContent = (target / 1000).toFixed(1) + suffix
-      } else {
-        el.textContent = target + suffix
-      }
+      el.textContent = formatNum(target) + suffix
     }
   }
   requestAnimationFrame(update)
@@ -71,7 +66,7 @@ const statObserver = new IntersectionObserver((entries) => {
   })
 }, { threshold: 0.5 })
 
-document.querySelectorAll('.about__stat-num').forEach(el => {
+document.querySelectorAll('.about__stat-num:not([data-no-count])').forEach(el => {
   // Store original text as target value
   const text = el.textContent.trim()
   // Parse numeric value (handle K, +, % etc)
