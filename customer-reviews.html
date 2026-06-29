@@ -15,19 +15,61 @@
     .back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--gold-light);text-decoration:none;font-size:0.9rem;font-weight:500;margin-bottom:1.5rem;transition:gap 0.3s}
     .back-link:hover{gap:0.7rem}
     .review-section-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;font-style:italic;color:var(--gold-light);margin:0 auto 1.2rem;max-width:640px;text-align:center}
-    .review-video-grid{display:flex;gap:1rem;margin:0 auto 2.5rem;max-width:960px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
-    .review-video-card{flex:1 1 300px;max-width:470px;border-radius:20px;overflow:hidden;border:1px solid var(--border);background:#000}
-    .review-video-card video{display:block;max-width:100%;height:auto}
-    .review-video-card__label{display:block;padding:0.5rem 1rem;font-size:0.82rem;font-weight:600;color:var(--gold-light);background:var(--bg);text-align:center;border-top:1px solid var(--border)}
-    .review-img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:960px;margin:0 auto 2.5rem}
-    .review-img-card{border-radius:16px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:180px}
+
+    /* ─── Two-column layout (desktop) ─── */
+    .reviews-layout{display:flex;gap:2rem;max-width:1100px;margin:0 auto;align-items:flex-start}
+    .reviews-left{flex:1;min-width:0}
+    .reviews-right{width:380px;flex-shrink:0}
+    @media(max-width:900px){
+      .reviews-layout{flex-direction:column}
+      .reviews-right{width:100%;max-width:500px;margin:0 auto}
+      .reviews-left{order:2}
+      .reviews-right{order:1}
+    }
+
+    /* ─── Carousel ─── */
+    .carousel-wrap{width:100%}
+    .carousel-viewport{overflow:hidden;border-radius:20px;border:1px solid var(--border);position:relative;background:#000;display:flex;align-items:center}
+    .carousel-track{display:flex;transition:transform 0.4s cubic-bezier(0.23,1,0.32,1);width:100%}
+    .carousel-slide{flex:0 0 100%;min-width:0}
+    .carousel-slide video{width:100%;display:block;height:auto}
+    .carousel-slide .review-video-card__label{display:block;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;color:var(--gold-light);background:var(--bg);text-align:center;border-top:1px solid var(--border)}
+    
+    /* arrows */
+    .carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s,opacity 0.3s;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+    .carousel-arrow:hover{background:rgba(0,0,0,0.85)}
+    .carousel-arrow:disabled{opacity:0;pointer-events:none}
+    .carousel-arrow--prev{left:10px}
+    .carousel-arrow--next{right:10px}
+    
+    /* counter + dots */
+    .carousel-counter{text-align:center;margin-top:0.8rem;font-size:0.85rem;color:var(--text-muted);font-weight:500;letter-spacing:0.05em}
+    .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:0.6rem}
+    .carousel-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);cursor:pointer;transition:background 0.3s;padding:0}
+    .carousel-dot.active{background:var(--gold-light)}
+    
+    @media(max-width:640px){
+      .page-reviews{padding:5rem 0.75rem 1.5rem}
+      .carousel-arrow{width:36px;height:36px;font-size:1rem}
+    }
+
+    /* ─── Image grid ─── */
+    .review-img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.8rem}
+    .review-img-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#1a1a2e,#16213e);cursor:pointer;transition:transform 0.3s}
+    .review-img-card:hover{transform:scale(1.02)}
     .review-img-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
-    @media(max-width:640px){.page-reviews{padding:5rem 0.75rem 1.5rem}}
+
+    /* ─── Lightbox popup ─── */
+    .lightbox{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.92);display:none;align-items:center;justify-content:center;padding:2rem}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95vw;max-height:90vh;border-radius:12px;object-fit:contain}
+    .lightbox-close{position:absolute;top:1rem;right:1.5rem;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.15);color:#fff;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s;z-index:10}
+    .lightbox-close:hover{background:rgba(255,255,255,0.3)}
   </style>
 </head>
 <body>
   <div class="page-reviews">
-    <div style="max-width:960px;margin:0 auto">
+    <div style="max-width:1100px;margin:0 auto">
       <a href="/" class="back-link">← Back to Home</a>
       <div class="reviews-header">
         <h1>Customer Reviews</h1>
@@ -37,43 +79,172 @@
         <a href="https://wa.me/8618026937104?text=Hi%20there%2C%20I%20saw%20your%20customer%20reviews%20and%20I%27m%20interested%20in%20your%20power%20banks%20wholesale" target="_blank" class="btn btn--whatsapp" style="display:inline-flex;max-width:340px;padding:0.7rem 1.5rem;font-size:0.85rem">📲 Contact Us on WhatsApp</a>
       </div>
 
-      <h2 class="review-section-title">Video reviews:</h2>
-      <div class="review-video-grid">
-        <div class="review-video-card">
-          <video src="review-video-1.mp4" poster="review-video-1-poster.jpg" controls playsinline preload="auto"></video>
-          <span class="review-video-card__label">Customer review 1-</span>
+      <div class="reviews-layout">
+        <!-- LEFT: Photos -->
+        <div class="reviews-left">
+          <h2 class="review-section-title" style="text-align:left;max-width:none">Customer photos:</h2>
+          <div class="review-img-grid">
+            <div class="review-img-card"><img src="review-img-1.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-2.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-3.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-4.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-5.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-6.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-7.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-8.jpg?v=1" alt="" loading="lazy" /></div>
+            <div class="review-img-card"><img src="review-img-9.jpg?v=1" alt="" loading="lazy" /></div>
+          </div>
         </div>
-        <div class="review-video-card">
-          <video src="review-video-2.mp4" poster="review-video-2-poster.jpg" controls playsinline preload="auto"></video>
-          <span class="review-video-card__label">Customer review 2-</span>
-        </div>
-        <div class="review-video-card">
-          <video src="review-video-3.mp4" poster="review-video-3-poster.jpg" controls playsinline preload="auto"></video>
-          <span class="review-video-card__label">Customer review 3-</span>
-        </div>
-        <div class="review-video-card">
-          <video src="review-video-4.mp4" poster="review-video-4-poster.jpg" controls playsinline preload="auto"></video>
-          <span class="review-video-card__label">Customer review 4-</span>
-        </div>
-        <div class="review-video-card">
-          <video src="review-video-5.mp4" poster="review-video-5-poster.jpg" controls playsinline preload="auto"></video>
-          <span class="review-video-card__label">Customer review 5-</span>
-        </div>
-      </div>
 
-      <h2 class="review-section-title">Customer photos:</h2>
-      <div class="review-img-grid">
-        <div class="review-img-card"><img src="review-img-1.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-2.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-3.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-4.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-5.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-6.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-7.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-8.jpg?v=1" alt="" loading="lazy" /></div>
-        <div class="review-img-card"><img src="review-img-9.jpg?v=1" alt="" loading="lazy" /></div>
+        <!-- RIGHT: Video carousel -->
+        <div class="reviews-right">
+          <h2 class="review-section-title" style="text-align:center">Video reviews:</h2>
+          <div class="carousel-wrap">
+            <div class="carousel-viewport">
+              <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                  <video src="review-video-1.mp4" poster="review-video-1-poster.jpg" controls playsinline preload="metadata"></video>
+                  <span class="review-video-card__label">Customer review 1-</span>
+                </div>
+                <div class="carousel-slide">
+                  <video src="review-video-2.mp4" poster="review-video-2-poster.jpg" controls playsinline preload="metadata"></video>
+                  <span class="review-video-card__label">Customer review 2-</span>
+                </div>
+                <div class="carousel-slide">
+                  <video src="review-video-3.mp4" poster="review-video-3-poster.jpg" controls playsinline preload="metadata"></video>
+                  <span class="review-video-card__label">Customer review 3-</span>
+                </div>
+                <div class="carousel-slide">
+                  <video src="review-video-4.mp4" poster="review-video-4-poster.jpg" controls playsinline preload="metadata"></video>
+                  <span class="review-video-card__label">Customer review 4-</span>
+                </div>
+                <div class="carousel-slide">
+                  <video src="review-video-5.mp4" poster="review-video-5-poster.jpg" controls playsinline preload="metadata"></video>
+                  <span class="review-video-card__label">Customer review 5-</span>
+                </div>
+              </div>
+              <button class="carousel-arrow carousel-arrow--prev" id="prevBtn" aria-label="Previous">◀</button>
+              <button class="carousel-arrow carousel-arrow--next" id="nextBtn" aria-label="Next">▶</button>
+            </div>
+            <div class="carousel-counter" id="carouselCounter">1 / 5</div>
+            <div class="carousel-dots" id="carouselDots"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- ═══ Lightbox ═══ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script>
+    // ═══ Carousel ═══
+    const track = document.getElementById('carouselTrack')
+    const prevBtn = document.getElementById('prevBtn')
+    const nextBtn = document.getElementById('nextBtn')
+    const counter = document.getElementById('carouselCounter')
+    const dotsContainer = document.getElementById('carouselDots')
+    const slides = track.querySelectorAll('.carousel-slide')
+    const videos = track.querySelectorAll('video')
+    const total = slides.length
+    let current = 0
+    let autoTimer = null
+
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button')
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '')
+      dot.setAttribute('aria-label', 'Go to review ' + (i + 1))
+      dot.addEventListener('click', () => goTo(i))
+      dotsContainer.appendChild(dot)
+    }
+
+    function goTo(index) {
+      if (index < 0) index = 0
+      if (index >= total) index = total - 1
+      current = index
+      track.style.transform = 'translateX(-' + (current * 100) + '%)'
+      counter.textContent = (current + 1) + ' / ' + total
+      prevBtn.disabled = current === 0
+      nextBtn.disabled = current === total - 1
+      // Center short videos vertically
+      slides.forEach((s, i) => {
+        s.style.display = 'flex'
+        s.style.flexDirection = 'column'
+        s.style.justifyContent = i === current ? 'center' : 'flex-start'
+        s.style.minHeight = i === current ? '100%' : ''
+      })
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current)
+      })
+      restartAuto()
+    }
+
+    function restartAuto() {
+      if (autoTimer) clearInterval(autoTimer)
+      autoTimer = setInterval(() => {
+        // only auto-advance if NO video is playing
+        const anyPlaying = [...videos].some(v => !v.paused)
+        if (!anyPlaying) {
+          goTo((current + 1) % total)
+        }
+      }, 4000)
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1))
+    nextBtn.addEventListener('click', () => goTo(current + 1))
+
+    // user interaction with arrows/dots stops auto briefly
+    prevBtn.addEventListener('click', restartAuto)
+    nextBtn.addEventListener('click', restartAuto)
+
+    // Touch swipe
+    let startX = 0, endX = 0
+    const viewport = document.querySelector('.carousel-viewport')
+    viewport.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].screenX }, {passive: true})
+    viewport.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].screenX
+      const diff = startX - endX
+      if (Math.abs(diff) > 50) {
+        if (diff > 0 && current < total - 1) goTo(current + 1)
+        else if (diff < 0 && current > 0) goTo(current - 1)
+      }
+    }, {passive: true})
+
+    goTo(0)
+
+    // ═══ Lightbox for images ═══
+    const lightbox = document.getElementById('lightbox')
+    const lightboxImg = document.getElementById('lightboxImg')
+    const lightboxClose = document.getElementById('lightboxClose')
+
+    document.querySelectorAll('.review-img-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src
+        lightbox.classList.add('open')
+      })
+    })
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('open')
+      lightboxImg.src = ''
+    })
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('open')
+        lightboxImg.src = ''
+      }
+    })
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('open')
+        lightboxImg.src = ''
+      }
+    })
+  </script>
 </body>
 </html>
